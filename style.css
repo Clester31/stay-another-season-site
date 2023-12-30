@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap');
+
+:root {
+    --blue1: #0071ac;
+    --blue2: #008a9f;
+    --blue3: #09b6a4;
+    --blue4: #9ce0b7;
+    --blue5: #d8f3c1;
+    --purple1: #4d00ac;
+    --purple2: #873caa;
+    --purple3: #9a4993;
+    --purple4: #c381a7;
+    --purple5: #c7a1a1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+}
+
+
+body {
+    background: linear-gradient(-45deg, var(--blue1), var(--blue2), var(--blue3), var(--blue4), var(--blue5));
+	background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+	height: 100vh;
+}
+
+.intro {
+    font-size: 25px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a0c13;
+    transition: 1s;
+}
+
+.intro .logo-header{
+    color: white;
+    font-weight: 400;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.topbar {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.border {
+    border-bottom: 5px solid rgba(255, 255, 255, 20%);
+}
+
+.topbar a{
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.6rem;
+    transition: color 0.2s ease;
+}
+
+.topbar .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 33%;
+    padding: 20px;
+    margin: auto;
+}
+
+.topbar .buttons .btn:hover {
+    color: white;
+}
+
+.popup-container, .links-container {
+    z-index: 2;
+    text-decoration: none;
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.popup-container .popup-content p {
+    padding: 15px;
+}
+
+.popup-content, .links-content {
+    width: 600px;
+    font-size: 20px;
+    font-family: Montserrat;
+    line-height: 1.6;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 80%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.links-content {
+    width: 500px;
+}
+
+.close-about-btn, .close-links-btn {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 60%);
+    transition: background-color 0.2s ease;
+}
+
+.close-about-btn:hover, .close-links-btn:hover {
+    background-color: white;
+}
+
+.links-container .links-content .btn {
+    color: black;
+    background-color: rgba(255, 255, 255, 60%);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    color: rgb(0, 0, 0);
+    padding: .5rem;
+    border-radius: 25px;
+    width: 300px;
+    margin-left: 17%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.links-container .links-content #twt-btn:hover {
+    background-color: rgb(0, 166, 255);
+    color: white;
+}
+
+.links-container .links-content #ins-btn:hover {
+    background-color: rgb(166, 55, 193);
+    color: white;
+}
+
+.links-container .links-content #spt-btn:hover {
+    background-color: rgb(22, 192, 93);
+    color: white;
+}
+
+.links-container .links-content #app-btn:hover {
+    background-color: rgb(221, 24, 99);
+    color: white;
+}
+
+.links-container .links-content #bnd-btn:hover {
+    background-color: rgb(57, 117, 208);
+    color: white;
+}
+
+.links-container .links-content #snd-btn:hover {
+    background-color: rgb(220, 113, 19);
+    color: white;
+}
+
+.page h1 {
+    font-weight: 800;
+    margin: auto;
+    margin-top: 20px;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 20%);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+}
+
+#album-title {
+    font-weight: 600;
+    text-align: center;
+    padding: 10px;
+}
+
+#song-title {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#tial-cover {
+    background-color: rgba(255, 255, 255, 20%); 
+    border-radius: 30px 30px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 25px auto 0 auto;
+    width: 30%;
+}
+
+.page .content .pb-options {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 20%);
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 30%;
+    border-radius: 0 0 30px 30px;
+}
+
+.page .content .pb-options i {
+    background-color: rgba(255, 255, 255, 40%);
+    margin-bottom: 15px;
+    font-size: 24px;
+    padding: 0 20px 0 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 15%;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+}
+
+.page .content .pb-options i:hover {
+    background-color: rgba(255, 255, 255, 80%);
+}
+
+.page .content .pb-options i:active {
+    background-color: white;
+}
+
+audio {
+    display: none;
+}
+
+#listen-now {
+    margin: 25px auto 0 auto;
+    text-align: center;
+}
+
+.page .content .listening-links {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 20%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.page .content .listening-links .streaming-link {
+    background-color: rgba(255, 255, 255, 40%);
+    border-radius: 20px;
+    width: 75px;
+    height: 75px;
+    padding: 10px;;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.15s ease-in;
+}
+
+.page .content .listening-links .streaming-link:hover {
+    background-color: rgba(255, 255, 255, 80%);
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

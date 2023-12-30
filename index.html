@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Another Season</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="intro">
+        <h1 class="logo-header">
+            <span class="logo">Stay </span><span class="logo">Another </span><span class="logo">Season</span>
+        </h1>
+    </div>
+
+    <div class="topbar">
+        <div class="buttons">
+            <a class="btn" href="#" id="home-btn">Home</a>
+            <a class="btn" href="#" id="about-btn">About</a>
+            <a class="btn" href="#" id="links-btn">Links</a>
+        </div>
+        <div class="border"></div>
+    </div>
+
+    <div class="popup-container" id="popup">
+        <div class="popup-content">
+            <h2>Who am I?</h2>
+            <p>I began producing music back in June of 2022, and since then, I have amassed a vast and unique catalog of experimental electornic/dance music. Inspired by the likes of Flying Lotus, Burial, Against All Logic, and many others, my music combines everything I love about house music into one neatly-sized box.</p>
+            <button class="close-about-btn" id="close-about-btn">Close</button>
+        </div>
+    </div> 
+
+    <div class="links-container" id="links">
+        <div class="links-content">
+            <a class="btn" target="_blank" href="https://twitter.com/Stamina_Master" id="twt-btn">Twitter</a>
+            <a class="btn" target="_blank" href="https://www.instagram.com/stayanotherseasonmus/" id="ins-btn">Instagram</a>
+            <a class="btn" target="_blank" href="https://open.spotify.com/artist/6i8lLCMSQ1pBgIt2B5XH3e?si=10-wkK_VT32KytzcwxVK7g" id="spt-btn">Spotify</a>
+            <a class="btn" target="_blank" href="https://music.apple.com/us/artist/stay-another-season/1694189815" id="app-btn">Apple Music</a>
+            <a class="btn" target="_blank" href="https://stayanotherseason.bandcamp.com/" id="bnd-btn">BandCamp</a>
+            <a class="btn" target="_blank" href="https://soundcloud.com/stayanotherseasonmusic" id="snd-btn">SoundCloud</a>
+            <button class='close-links-btn' id='close-links-btn'>Close</button>
+        </div>
+    </div> 
+
+    <div class="page">
+        <div class="content">
+            <h1 id="announcement">New Album Out!</h1>
+            <img id="tial-cover" src="resources/3.jpg">
+            <div class="pb-options">
+                <h2 id="album-title">Twice in a Lifetime</h2>
+                <h3 id="song-title">🎵 Sata Link 🎵</h3>
+                <a id="play-btn"><i class="fa-solid fa-play"></i></a>
+                <a id="pause-btn"><i class="fa-solid fa-pause"></i></a>
+            </div>
+            <h2 id="listen-now">Listen Now on Streaming</h2>
+            <div class="listening-links">
+                <a class="streaming-link" target="_blank" href="https://open.spotify.com/album/3tvOwFE4IfugdZ0pomdsqa?si=cgn9h2n8SEuK6B2-6bxSlQ">
+                    <img src="resources/file-spotify-logo-png-4.png" alt = "Spotify">
+                </a>
+                <a class="streaming-link" target="_blank" href="https://music.apple.com/us/album/twice-in-a-lifetime/1697881056">
+                    <img src="resources/aaple-music-logo.png" alt = "Apple Music">
+                </a>
+                <a class="streaming-link" target="_blank" href="https://stayanotherseason.bandcamp.com/album/twice-in-a-lifetime">
+                    <img src="resources/bandcamp-logo-transparent.png" alt = "Bandcamp">
+                </a>
+                <a class="streaming-link" target="_blank" href="https://soundcloud.com/stayanotherseasonmusic/sets/twice-in-a-lifetime?si=266b88a33fab471c848dbc25706603a6&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+                    <img src="resources/soundcloud-logo-transparent.png" alt = "Soundcloud">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <audio id="myAudio" controls>
+        <source src="resources/03_SATA.wav" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="footer">
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
